@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #000;
+    font-size: 2.2rem;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    border-bottom: 2px solid #11998e;
+    padding-bottom: 10px;
+}
+
+.card p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+#postagem {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    min-height: 100px;
+}
+
+#post-titulo {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+#post-body {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.acoes {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+button {
+    background: #11998e;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+#lista-favoritos {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+#lista-favoritos li {
+    background: #f8f9fa;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    color: #333;
+    border-left: 4px solid #11998e;
+}
+
+#lista-favoritos li:last-child {
+    margin-bottom: 0;
+}
+
+#user-geo {
+    background: #e8f4f8;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .acoes {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}

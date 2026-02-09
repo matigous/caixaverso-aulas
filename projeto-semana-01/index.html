@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Explorador de Destinos</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Explorador de Destinos</h1>
+        </header>
+
+        <section class="card">
+            <h2>Ponto de Partida</h2>
+            <p id="user-geo">Clique no botão para obter sua localização</p>
+            <button onclick="minhaLocalizacao()">Obter Localização</button>
+        </section>
+
+        <section class="card">
+            <h2>Destino Sugerido</h2>
+            <div id="postagem">
+                <p id="post-titulo">Clique para buscar um destino...</p>
+                <p id="post-body"></p>
+            </div>
+            <div class="acoes">
+                <button onclick="buscarPostagem()">Buscar Novo Destino</button>
+                <button onclick="salvarFavorito()">Salvar Favorito</button>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Meus Favoritos</h2>
+            <ul id="lista-favoritos">
+                <li>Nenhum favorito salvo ainda.</li>
+            </ul>
+            <button onclick="limparFavoritos()">Limpar Favoritos</button>
+        </section>
+    </div>
+   
+    <script src="script.js"></script>
+</body>
+</html>
