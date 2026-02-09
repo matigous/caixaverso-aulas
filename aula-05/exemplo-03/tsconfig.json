@@ -1,0 +1,13 @@
+{
+ 
+  "compilerOptions": {
+   "target":"ES6", //GERA O JS MODERNO
+   "module":"esnext", //PERMIT O USO DE IMPORT/EXPORT
+   "strict":true, // GARANTE A TIPAGEM FORTE
+   "lib":["DOM","ES6","esnext"], // PERMITe O USO DO DOM NO TYPESCRIPT
+   "esModuleInterop": true, //MELHORA A COMPATIBILIDADE DOS MÓDULOS,
+   "outDir": "./src/js", // DIRETÓRIO DE SAÍDA DO JS COMPILADO
+    "rootDir": "./src", // DIRETÓRIO RAIZ DO PROJETO
+  }
+}
+ 

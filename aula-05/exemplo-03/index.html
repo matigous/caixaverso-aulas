@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cliente</title>
+  </head>
+  <body>
+    <header>
+      <h1>Cadastro de Cliente</h1>
+    </header>
+    <main>
+      <form id="form-cliente">
+          <fieldset>
+            <legend>Dados Pessoais:</legend>
+            <div class="campo">
+              <label for="nome">Nome Completo:</label>
+              <input type="text" id="nome" name="nome" required />
+              <span class="nome-error" id="error-nome"></span>
+            </div>
+            <div class="campo">
+              <label for="data-nascimento">Data Nascimento:</label>
+              <input type="date" id="data-nascimento" name="data-nascimento" />
+              <span class="date-error" id="error-nascimento"></span>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Contato</legend>
+            <div class="campo">
+              <label for="telefone">Telefone:</label>
+              <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                placeholder="(11)9999-9999"
+                required
+              />
+                <span class="telefone-error" id="error-telefone"></span>
+            </div>
+          </fieldset>
+          <br />
+          <button type="submit">Finalizar Cadastro</button>
+      </form>
+    </main>
+
+    <script type="module" src="./src/js/script.js"></script>
+  </body>
+</html>
