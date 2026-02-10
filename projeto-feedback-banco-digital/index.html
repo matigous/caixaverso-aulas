@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/styles.css" />
+    <title>Portal de Feedback Banco Digital</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>Portal de Feedback Banco Digital</h1>
+      </nav>
+    </header>
+    <main>
+      <section class="form-section">
+        <h2>Sua opinião é importante!</h2>
+        <form id="form-cliente" action="#" method="post">
+          <div class="campo">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required />
+            <span class="nome-error" id="error-nome"></span>
+          </div>
+          <div class="campo">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+            <span class="email-error" id="error-email"></span>
+          </div>
+
+          <div class="campo">
+            <label for="message">Mensagem (mínimo 10 caracteres):</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Enviar sua opinão"
+              required
+            ></textarea>
+            <span class="message-error" id="error-message"></span>
+          </div>
+          <button type="submit" class="btn-enviar">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Banco Digital</p>
+    </footer>
+
+    <script type="module" src="./src/js/script.js"></script>
+  </body>
+</html>
