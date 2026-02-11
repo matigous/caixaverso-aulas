@@ -1,0 +1,20 @@
+/*
+Os Mixins são funções reutilizaveis de estilos, elas permitem que você possa
+agrupar declarações CSS que desejar em lugares, evitando o copiar e colar
+ajuda na manutenção
+*/
+
+//Define o nome e o parametro
+@mixin device($breakpoint){
+
+    //criar o media query usando uma variavel externa($tablet)
+    //@content onde entra o codigo do css definido
+    @if $breakpoint == tablet{
+        @media (min-width: #{$tablet}) {@content;}
+    }
+    // senão for table verifica se o valor for desktop
+    @else if $breakpoint == desktop {
+        
+        @media (min-width:#{$desktop}) {@content;}
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "exemplo1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch main.scss css/estilo.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "sass": "^1.97.3"
+  }
+}

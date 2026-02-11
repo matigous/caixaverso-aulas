@@ -1,0 +1,17 @@
+//variaveis de palheta de cores 
+
+$color-primary:blue;
+$color-secundary:#00c853;
+$color-accent:#ffab00;
+$color-text:#333;
+$color-bg:#f5f5f5;
+
+// tipografia
+
+$font-main:'Arial',sans-serif;
+$font-size-base:1rem;
+
+// definindo as variaveis que será chamada no mixins
+
+$tablet:768px;
+$desktop:1024px;

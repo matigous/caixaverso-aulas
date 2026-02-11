@@ -1,0 +1,20 @@
+@use '../abstracts/variables' as *;
+
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    font-family: $font-main;
+    background: $color-bg;
+    color:$color-text;
+    line-height: 1.6;
+}
+
+img{
+    //Garante que a imagem nunca seja maior que o container onde está
+    max-width: 100%;
+    //removendo espaço vazio que a imagem possui
+    display: block;
+}

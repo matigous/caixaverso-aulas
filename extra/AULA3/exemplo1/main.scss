@@ -1,0 +1,16 @@
+// abstracts
+@use 'abstracts/variables' as *; //permite usar as variaveis sem prefixo
+@use 'abstracts/mixins';
+
+//base
+@use 'base/reset';
+
+//layout
+@use 'layout/grid';
+
+//components
+@use 'components/button';
+@use 'components/card-veiculo';
+
+//pages
+@use 'pages/home';

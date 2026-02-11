@@ -1,0 +1,28 @@
+@use '../abstracts/variables'as *;
+
+
+.btn{
+    display: inline-block; //permitee defiir margens e preenchimento sem ocupar a linha toda
+    padding: 12px 24px;// espaçamento interno
+    border:none; // remove borda padrão
+    border-radius: 10px; //deixa as pontas arredondadas
+    cursor: pointer; //criar um ponteiro de mãoziha ao passar o mouse
+    text-decoration: none;//remove o sublinhado caso seja um link
+    line-height: 100px;
+    font-weight: 700;
+
+    &--primary{
+        background: $color-primary;
+        color:#fff;
+
+        &:hover{
+            // O Sass clareia a cor automaticamente em 10%
+            background: lighten($color-primary,10%);
+        }
+        &--success{
+            background:$color-secundary;
+            color:#fff;
+        }
+    }
+
+}

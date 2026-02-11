@@ -1,0 +1,78 @@
+@charset "UTF-8";
+/*
+Os Mixins são funções reutilizaveis de estilos, elas permitem que você possa
+agrupar declarações CSS que desejar em lugares, evitando o copiar e colar
+ajuda na manutenção
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 100px;
+  font-weight: 700;
+}
+.btn--primary {
+  background: blue;
+  color: #fff;
+}
+.btn--primary:hover {
+  background: #3333ff;
+}
+.btn--primary--success {
+  background: #00c853;
+  color: #fff;
+}
+
+.card-veiculo {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 15px;
+  flex: 1 1 300px;
+}
+.card-veiculo__header {
+  margin-bottom: 10px;
+}
+.card-veiculo__info {
+  padding: 10px 0;
+}
+.card-veiculo__price {
+  font-size: 1.5rem;
+  color: blue;
+  display: block;
+  margin: 10px 0;
+}
+
+.home {
+  padding: 60px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5)), url("../assets/imagem.jpg");
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+.home__title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/*# sourceMappingURL=styles.css.map */
