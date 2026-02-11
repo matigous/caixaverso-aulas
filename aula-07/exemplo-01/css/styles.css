@@ -50,6 +50,11 @@ ajuda na manutenção
   padding: 15px;
   flex: 1 1 300px;
 }
+@media (min-width: 768px) {
+  .card-veiculo {
+    background-color: red;
+  }
+}
 .card-veiculo__header {
   margin-bottom: 10px;
 }
