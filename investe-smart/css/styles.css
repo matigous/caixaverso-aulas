@@ -201,12 +201,6 @@ th {
   will-change: background-color, transform, box-shadow;
   user-select: none;
 }
-.btn:hover {
-  transform: translateY(-2px);
-}
-.btn:active {
-  transform: translateY(0);
-}
 .btn:focus {
   outline: 2px solid #1e40af;
   outline-offset: 2px;
@@ -217,21 +211,20 @@ th {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 .btn--primary:hover {
-  background-color: rgb(38.1707317073, 80.2975609756, 217.8292682927);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  opacity: 0.9;
 }
 .btn--primary:active {
   background-color: rgb(22.5365853659, 48.0780487805, 131.4634146341);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 .btn--primary--success {
-  background-color: #10b981;
+  background-color: #1e40af;
 }
 .btn--primary--success:hover {
-  background-color: rgb(20.0597014925, 231.9402985075, 161.7313432836);
+  opacity: 0.9;
 }
 .btn--primary--success:active {
-  background-color: rgb(11.9402985075, 138.0597014925, 96.2686567164);
+  background-color: rgb(22.5365853659, 48.0780487805, 131.4634146341);
 }
 .btn--secondary {
   background-color: transparent;
@@ -271,7 +264,7 @@ th {
 }
 
 .card-investment {
-  background: #ffffff;
+  background: #EDEDED;
   border: 1px solid #e5e7eb;
   border-radius: 1rem;
   padding: 2rem;
@@ -279,12 +272,9 @@ th {
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  transition: all 250ms ease;
-  will-change: transform, box-shadow;
 }
 .card-investment:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  opacity: 0.88;
 }
 .card-investment__title {
   font-size: 1.125rem;
@@ -319,9 +309,8 @@ th {
 }
 .card-investment--featured {
   border-color: #1e40af;
-  background: hsl(225.9310344828, 70.7317073171%, 136.1960784314%);
+  background: #EDEDED;
   position: relative;
-  transform: scale(1.02);
 }
 .card-investment--featured::before {
   content: "⭐ Mais Popular";
@@ -336,7 +325,7 @@ th {
   font-weight: 600;
 }
 .card-investment--featured:hover {
-  transform: scale(1.02) translateY(-4px);
+  opacity: 0.88;
 }
 @media (min-width: 768px) {
   .card-investment {

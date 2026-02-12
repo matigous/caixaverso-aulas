@@ -18,14 +18,6 @@
   will-change: background-color, transform, box-shadow;
   user-select: none;
 
-  &:hover {
-    transform: translateY(-2px);
-  }
-
-  &:active {
-    transform: translateY(0);
-  }
-
   &:focus {
     outline: 2px solid $color-primary;
     outline-offset: 2px;
@@ -37,8 +29,7 @@
     box-shadow: $shadow-base;
 
     &:hover {
-      background-color: color.adjust($color-primary, $lightness: 10%);
-      box-shadow: $shadow-md;
+      opacity: 0.9;
     }
 
     &:active {
@@ -47,14 +38,14 @@
     }
 
     &--success {
-      background-color: $color-secondary;
+      background-color: $color-primary;
 
       &:hover {
-        background-color: color.adjust($color-secondary, $lightness: 10%);
+        opacity: 0.9;
       }
 
       &:active {
-        background-color: color.adjust($color-secondary, $lightness: -10%);
+        background-color: color.adjust($color-primary, $lightness: -10%);
       }
     }
   }

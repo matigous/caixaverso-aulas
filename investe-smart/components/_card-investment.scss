@@ -3,7 +3,7 @@
 @use 'sass:color';
 
 .card-investment {
-  background: $color-white;
+  background: #EDEDED;
   border: 1px solid $color-border;
   border-radius: $radius-lg;
   padding: $space-lg;
@@ -11,12 +11,9 @@
   display: flex;
   flex-direction: column;
   box-shadow: $shadow-md;
-  transition: all $transition-base;
-  will-change: transform, box-shadow;
 
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: $shadow-lg;
+    opacity: 0.88;
   }
 
   &__title {
@@ -55,9 +52,8 @@
 
   &--featured {
     border-color: $color-primary;
-    background: color.adjust($color-primary, $lightness: 96%);
+    background: #EDEDED;
     position: relative;
-    transform: scale(1.02);
 
     &::before {
       content: '⭐ Mais Popular';
@@ -73,7 +69,7 @@
     }
 
     &:hover {
-      transform: scale(1.02) translateY(-4px);
+      opacity: 0.88;
     }
   }
 
