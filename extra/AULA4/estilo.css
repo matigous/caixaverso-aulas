@@ -1,0 +1,68 @@
+:root{
+    --bg:#f4f4f9;
+    --bgNav:rgb(3, 3, 94);
+}
+
+body{
+    margin: 0;
+    background:var(--bg);
+}
+
+.main-nav{
+    background: var(--bgNav);
+    padding: 1rem; /*equivale a 16px*/
+    color:#fff;
+    display: flex;
+    flex-direction: column;
+}
+#menu-toggle{
+    background: #fff;
+    border:1px solid #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    align-self: flex-end;/*Empurra apenas o elemento para o canto do container*/
+}
+
+#nav-list{
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: none;
+    flex-direction: column;
+    gap:10px;
+}
+#nav-list li a{
+    text-decoration: none;
+    color:#fff;
+    display: block;
+    padding: 1rem;
+    border-radius: 5px;
+}
+#nav-list li a:hover{
+    background: #3498db;
+}
+
+/* classe que será adicionada pelo javascript para mostrar o menu */
+#nav-list.active{
+    display:flex;
+}
+
+/* responsividade para telas maiores */
+
+@media (min-width:768px){
+    .main-nav{
+        flex-direction: row;/*deixa os link um do lado do outro  na mesma linha do button*/
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 2rem;
+    }
+    #menu-toggle{
+        display: none;
+    }
+    #nav-list{
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+    }
+}
