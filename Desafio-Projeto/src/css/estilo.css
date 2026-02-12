@@ -1,0 +1,228 @@
+/* 1. TOKENS DE DESIGN (Variáveis) */
+:root {
+    --primary-gold: #c5a059;
+    --dark-navy: #0f172a;
+    --card-bg: #1e293b;
+    --text-main: #f1f5f9;
+    --text-dim: #94a3b8;
+    
+    /* RESPONSIVIDADE AVANÇADA: Espaçamentos fluídos */
+    --padding-container: clamp(1rem, 5vw, 3rem);
+    --font-step-1: clamp(1.2rem, 2vw + 1rem, 1.8rem);
+}
+
+body {
+    background-color: var(--dark-navy);
+    color: var(--text-main);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    padding: var(--padding-container);
+}
+
+/* 3. FILTRO (Mobile First) */
+.header-filter {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+#filterInput {
+    width: 100%;
+    max-width: 500px;
+    padding: 1rem 1.5rem;
+    background: var(--card-bg);
+    border: 2px solid #334155;
+    border-radius: 50px; 
+    color: white;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#filterInput:focus {
+    outline: none;
+    border-color: var(--primary-gold);
+    box-shadow: 0 0 0 4px rgba(197, 160, 89, 0.2);
+}
+
+/* 4. GRID DE PLANOS (Responsividade Avançada) */
+#planosGrid {
+    display: grid;
+    /* O Grid se auto-ajusta: mínimo de 280px por card ou 100% no mobile */
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+    gap: 2rem;
+}
+
+/* 5. CARD DO CONSÓRCIO (Implementação do HTML do TS) */
+.plan-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border: 1px solid #334155;
+    transition: transform 0.3s ease;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.label {
+    background: rgba(197, 160, 89, 0.1);
+    color: var(--primary-gold);
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card-header h3 {
+    margin-top: 0.5rem;
+    font-size: 1.25rem;
+    line-height: 1.2;
+}
+
+.card-body p {
+    font-size: 1.1rem;
+    color: var(--text-dim);
+}
+
+.card-body strong {
+    color: var(--text-main);
+    font-size: 1.4rem;
+    display: block;
+}
+
+/* 6. BOTÃO E INTERAÇÃO */
+.btn-primary {
+    background: var(--primary-gold);
+    color: var(--dark-navy);
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: flex-end; /* Empurra o botão para o final do card */
+    transition: filter 0.2s;
+}
+
+.btn-primary:hover {
+    filter: brightness(1.2);
+}
+
+/* Estilos da Navegação */
+.main-nav {
+    background: var(--dark-navy);
+    padding: 1rem 0;
+    border-bottom: 1px solid #334155;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--padding-container);
+}
+
+/* Botão Hambúrguer (Mobile First) */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    background: var(--primary-gold);
+    transition: 0.3s;
+}
+
+/* Menu Mobile (Escondido) */
+.nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Fora da tela */
+    width: 80%;
+    height: 100vh;
+    background: var(--card-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s ease-in-out;
+}
+
+.nav-links.active {
+    right: 0; /* Desliza para dentro */
+}
+
+.nav-links ul {
+    list-style: none;
+    text-align: center;
+}
+
+.nav-links li { margin: 2rem 0; }
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+/* RESPONSIVIDADE AVANÇADA (Desktop) */
+@media (min-width: 768px) {
+    .hamburger { display: none; } /* Esconde o botão no PC */
+
+    .nav-links {
+        position: static;
+        width: auto;
+        height: auto;
+        background: none;
+        transition: none;
+    }
+
+    .nav-links ul {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .nav-links a { font-size: 1rem; }
+}
+
+/* Animação do Hambúrguer para X */
+.hamburger.open .line:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.hamburger.open .line:nth-child(2) { opacity: 0; }
+.hamburger.open .line:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+
+
+/* 7. PROGRESSIVE ENHANCEMENT
+constrói uma base que funcione em qualquer navegador (mesmo os antigos ou com JS desativado) e "melhorar" a 
+experiência com recursos avançados de CSS e JavaScript apenas para navegadores que os suportam.
+*/
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Efeito de hover apenas para dispositivos com mouse */
+@media (hover: hover) {
+    .plan-card:hover {
+        transform: translateY(-8px);
+        border-color: var(--primary-gold);
+    }
+}
+
+/* Ajuste para telas muito pequenas */
+@media (max-width: 350px) {
+    .plan-card {
+        padding: 1rem;
+    }
+}

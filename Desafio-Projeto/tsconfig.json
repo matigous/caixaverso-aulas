@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "ES6" /* MELHORES PRÁTICAS: Gera JS moderno */,
+    "module": "ESNext" /* MELHORES PRÁTICAS: Permite uso de import/export */,
+    "outDir": "./src/js" /* Onde o JS compilado será salvo */,
+    "strict": true /* ACESSIBILIDADE DE CÓDIGO: Garante tipagem forte */,
+    "lib": ["DOM", "ESNext"] /* Permite o uso do DOM no TypeScript */,
+    "esModuleInterop": true /* Melhora compatibilidade de módulos */
+  }
+}

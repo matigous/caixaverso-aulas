@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+     <link rel="stylesheet" href="./src/css/estilo.css">
+    <title>Exemplo5</title>
+</head>
+<body>
+
+    <header class="main-nav">
+    <div class="nav-content">
+        <div class="logo">Consórcio<span>Master</span></div>
+        
+        <button class="hamburger" id="btnMenu" aria-expanded="false" aria-label="Abrir Menu">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+
+        <nav class="nav-links" id="menuLinks">
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Planos</a></li>
+                <li><a href="#">Simulador</a></li>
+                <li><a href="#" class="btn-contato">Falar com Consultor</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <main class="consorcio-container">
+        <section class="header-filter">
+            <h2>Simulador de Consórcio</h2>
+            <div class="filter-group">
+                <input type="text" id="filterInput" placeholder="Ex: Imóvel, Carro, Valor..." aria-label="Filtrar planos">
+            </div>
+        </section>
+
+        <div id="planosGrid" class="planos-grid">
+            <p class="voltar">Carregando as melhores ofertas para você...</p>
+        </div>
+    </main>
+    
+
+        <script type="module" src="./src/js/script.js"></script>
+</body>
+</html>

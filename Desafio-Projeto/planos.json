@@ -1,0 +1,7 @@
+[
+  { "id": 1, "tipo": "Imóvel", "valorCredito": 300000, "parcela": 1450.50, "prazo": 200 },
+  { "id": 2, "tipo": "Veículo", "valorCredito": 50000, "parcela": 680.00, "prazo": 80 },
+  { "id": 3, "tipo": "Veículo", "valorCredito": 95000, "parcela": 1100.00, "prazo": 72 },
+  { "id": 4, "tipo": "Imóvel", "valorCredito": 500000, "parcela": 2300.00, "prazo": 180 },
+  { "id": 5, "tipo": "Moto", "valorCredito": 250000, "parcela": 3200.00, "prazo": 100 }
+]
