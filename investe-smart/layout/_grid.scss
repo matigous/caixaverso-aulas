@@ -1,0 +1,62 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as mx;
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $space-base;
+  padding-left: $space-base;
+
+  @include mx.tablet {
+    width: 95%;
+    padding-right: $space-md;
+    padding-left: $space-md;
+  }
+
+  @include mx.desktop {
+    width: 100%;
+    padding-right: $space-lg;
+    padding-left: $space-lg;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-lg;
+  margin-bottom: $space-xl;
+
+  @include mx.tablet {
+    gap: $space-md;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: $space-lg;
+
+  @include mx.tablet {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: $space-md;
+  }
+
+  @include mx.desktop {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: $space-lg;
+  }
+}
+
+.section {
+  padding: $space-xl $space-base;
+
+  @include mx.tablet {
+    padding: $space-xl $space-lg;
+  }
+
+  @include mx.desktop {
+    padding: $space-2xl $space-lg;
+  }
+}

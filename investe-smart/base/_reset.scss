@@ -1,0 +1,121 @@
+@use '../abstracts/variables' as *;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: $font-main;
+  font-size: $font-size-base;
+  line-height: $line-height-normal;
+  color: $color-text;
+  background-color: $color-white;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-headings;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  margin-bottom: $space-md;
+}
+
+h1 {
+  font-size: $font-size-3xl;
+}
+
+h2 {
+  font-size: $font-size-2xl;
+}
+
+h3 {
+  font-size: $font-size-xl;
+}
+
+h4,
+h5,
+h6 {
+  font-size: $font-size-lg;
+}
+
+p {
+  margin-bottom: $space-base;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  transition: color $transition-base;
+
+  &:hover {
+    color: $color-primary-light;
+  }
+
+  &:focus {
+    outline: 2px solid $color-primary;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+ul,
+ol {
+  margin-bottom: $space-base;
+  margin-left: $space-lg;
+}
+
+li {
+  margin-bottom: $space-xs;
+}
+
+input,
+textarea,
+select {
+  font-family: $font-main;
+  font-size: $font-size-base;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+code,
+pre {
+  font-family: 'Fira Code', 'Courier New', monospace;
+  background-color: $color-bg-alt;
+  padding: $space-xs $space-sm;
+  border-radius: $radius-base;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  font-weight: $font-weight-semibold;
+}
+
+td,
+th {
+  padding: $space-sm $space-base;
+  border-bottom: 1px solid $color-border;
+}

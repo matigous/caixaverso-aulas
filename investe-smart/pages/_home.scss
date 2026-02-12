@@ -1,0 +1,118 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as mx;
+@use 'sass:color';
+
+.home {
+  padding: $space-2xl $space-base;
+  background: linear-gradient(135deg,
+      color.mix($color-primary, $color-primary-dark, 50%) 0%,
+      $color-primary 100%);
+  color: $color-white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: rgba($color-white, 0.05);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -5%;
+    width: 400px;
+    height: 400px;
+    background: rgba($color-white, 0.03);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    margin-bottom: $space-md;
+    line-height: $line-height-tight;
+    letter-spacing: -0.5px;
+
+    @include mx.tablet {
+      font-size: $font-size-3xl;
+    }
+
+    @include mx.desktop {
+      font-size: 3rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: $font-size-base;
+    color: rgba($color-white, 0.95);
+    margin-bottom: $space-lg;
+    line-height: $line-height-relaxed;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mx.tablet {
+      font-size: $font-size-lg;
+    }
+  }
+
+  @include mx.tablet {
+    padding: $space-xl $space-lg;
+  }
+
+  @include mx.desktop {
+    padding: $space-2xl $space-lg;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.products {
+  padding: $space-2xl $space-base;
+  background-color: $color-bg;
+
+  @include mx.tablet {
+    padding: $space-xl $space-lg;
+  }
+
+  @include mx.desktop {
+    padding: $space-2xl $space-lg;
+  }
+
+  &__heading {
+    text-align: center;
+    margin-bottom: $space-2xl;
+
+    h2 {
+      font-size: $font-size-2xl;
+      margin-bottom: $space-md;
+
+      @include mx.tablet {
+        font-size: $font-size-3xl;
+      }
+    }
+
+    p {
+      color: $color-text-light;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+}

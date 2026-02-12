@@ -1,0 +1,67 @@
+@use '../abstracts/variables' as *;
+
+@mixin tablet {
+    @media (min-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media (min-width: $large) {
+        @content;
+    }
+}
+
+@mixin device($breakpoint) {
+    @if $breakpoint =="tablet" {
+        @media (min-width: $tablet) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint =="desktop" {
+        @media (min-width: $desktop) {
+            @content;
+        }
+    }
+}
+
+@mixin focus-ring($color: $color-primary) {
+    outline: 2px solid $color;
+    outline-offset: 2px;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin smooth-transition($property: all, $duration: $transition-base) {
+    transition: $property $duration;
+    will-change: $property;
+}
+
+@mixin sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}

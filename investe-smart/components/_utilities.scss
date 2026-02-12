@@ -1,0 +1,116 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as mx;
+
+.mt-1 {
+  margin-top: $space-base;
+}
+
+.mt-2 {
+  margin-top: $space-md;
+}
+
+.mt-3 {
+  margin-top: $space-lg;
+}
+
+.mb-1 {
+  margin-bottom: $space-base;
+}
+
+.mb-2 {
+  margin-bottom: $space-md;
+}
+
+.mb-3 {
+  margin-bottom: $space-lg;
+}
+
+// Padding
+.p-1 {
+  padding: $space-base;
+}
+
+.p-2 {
+  padding: $space-md;
+}
+
+.p-3 {
+  padding: $space-lg;
+}
+
+// Texto
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-primary {
+  color: $color-primary;
+}
+
+.text-secondary {
+  color: $color-secondary;
+}
+
+.text-danger {
+  color: $color-danger;
+}
+
+.text-light {
+  color: $color-text-light;
+}
+
+.text-bold {
+  font-weight: $font-weight-bold;
+}
+
+.text-semibold {
+  font-weight: $font-weight-semibold;
+}
+
+// Flex
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  @include mx.flex-center;
+}
+
+.gap-1 {
+  gap: $space-base;
+}
+
+.gap-2 {
+  gap: $space-md;
+}
+
+.gap-3 {
+  gap: $space-lg;
+}
+
+// Largura
+.w-full {
+  width: 100%;
+}
+
+// Overflow
+.truncate {
+  @include mx.truncate;
+}
+
+// Opacidade
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}

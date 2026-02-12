@@ -1,0 +1,31 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as mx;
+
+.card-veiculo {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 15px;
+  // Flex 1(cresce) | 1(encolhe) | 300px tamanho da base
+  //ajuda a criar o grid responsivo automaticamente
+  flex: 1 1 300px;
+
+
+  @include mx.device("tablet") {
+    background-color: red;
+  }
+
+  &__header {
+    margin-bottom: 10px;
+  }
+
+  &__info {
+    padding: 10px 0;
+  }
+
+  &__price {
+    font-size: 1.5rem;
+    color: $color-primary;
+    display: block;
+    margin: 10px 0;
+  }
+}

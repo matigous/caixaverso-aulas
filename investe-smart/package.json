@@ -1,0 +1,15 @@
+{
+  "name": "investe-smart",
+  "version": "1.0.0",
+  "description": "<!-- O Sass (Syntactically Awesome Style Sheets) é um pré-processador CSS.",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "src/js/script.js",
+  "scripts": {
+    "sass": "sass --watch main.scss css/styles.css"
+  },
+  "devDependencies": {
+    "sass": "^1.97.3"
+  }
+}

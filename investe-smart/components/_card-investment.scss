@@ -1,0 +1,91 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as mx;
+@use 'sass:color';
+
+.card-investment {
+  background: $color-white;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  padding: $space-lg;
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: $shadow-md;
+  transition: all $transition-base;
+  will-change: transform, box-shadow;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-lg;
+  }
+
+  &__title {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    color: $color-text;
+    margin-bottom: $space-md;
+    line-height: $line-height-tight;
+  }
+
+  &__amount {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-semibold;
+    color: $color-primary;
+    margin-bottom: $space-md;
+    display: block;
+  }
+
+  &__features {
+    font-size: $font-size-sm;
+    color: $color-text-light;
+    line-height: $line-height-relaxed;
+    margin-bottom: $space-md;
+    flex: 1;
+  }
+
+  &__cta {
+    display: flex;
+    gap: $space-sm;
+    margin-top: auto;
+
+    @include mx.tablet {
+      gap: $space-base;
+    }
+  }
+
+  &--featured {
+    border-color: $color-primary;
+    background: color.adjust($color-primary, $lightness: 96%);
+    position: relative;
+    transform: scale(1.02);
+
+    &::before {
+      content: '⭐ Mais Popular';
+      position: absolute;
+      top: -12px;
+      left: $space-lg;
+      background-color: $color-primary;
+      color: $color-white;
+      padding: $space-xs $space-sm;
+      border-radius: $radius-md;
+      font-size: $font-size-xs;
+      font-weight: $font-weight-semibold;
+    }
+
+    &:hover {
+      transform: scale(1.02) translateY(-4px);
+    }
+  }
+
+  @include mx.tablet {
+    padding: $space-lg;
+  }
+
+  @include mx.desktop {
+    padding: $space-xl;
+
+    &__cta {
+      gap: $space-md;
+    }
+  }
+}
